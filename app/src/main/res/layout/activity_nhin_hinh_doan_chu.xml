@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NhinHinhDoanChuActivity"
+    android:background="#000">
+    <LinearLayout
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/ln_dapan"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_below="@id/ln_dapan"
+        android:id="@+id/img_hinhgame"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+        <ImageView
+            android:src="@drawable/bosua"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/khungtraicay"/>
+        <FrameLayout
+            android:id="@+id/fr_countDownTime"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="70dp"
+            android:layout_height="70dp" >
+            <ImageView
+                android:src="@drawable/donghodemh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_countDownTimer"
+                android:textColor="#3d1600"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="00:00"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/frm_tree"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/img_hinhgame"
+        android:scaleType="fitXY"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/anhcay">
+        <ImageView
+            android:padding="20dp"
+            android:src="@drawable/so5"
+            android:layout_gravity="right|top"
+            android:background="@drawable/woodman"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_below="@id/img_hinhgame"
+        android:layout_toRightOf="@id/frm_tree"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ln_score"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/woodboardscore"
+            android:layout_width="100dp"
+            android:layout_height="140dp">
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/ln_reRound"
+                android:paddingTop="28dp"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="13dp"
+                    android:layout_alignParentBottom="true"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp">
+                <ImageView
+                    android:src="@drawable/so1"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:src="@drawable/so2"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rel_menu"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/manhientai"
+            android:layout_below="@id/ln_score"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginTop="27dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:layout_width="50dp"
+                android:layout_height="30dp">
+                <ImageView
+                    android:src="@drawable/chumenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

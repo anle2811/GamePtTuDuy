@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:gravity="center"
+    android:id="@+id/rel_gamelose"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/img_youlose"
+        android:src="@drawable/gameoverbanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <LinearLayout
+        android:id="@+id/ln_naviUlose"
+        android:gravity="center"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_below="@id/img_youlose"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:id="@+id/ln_playagain"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+            <TextView
+                android:textColor="#26b19c"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="PlayAgain"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/replayicon"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ln_homeback"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+            <TextView
+                android:textColor="#26b19c"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Home"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/homeicon"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/ln_naviUlose"
+        android:id="@+id/img_cancelYouLose"
+        android:src="@drawable/cancelicon"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+</RelativeLayout>

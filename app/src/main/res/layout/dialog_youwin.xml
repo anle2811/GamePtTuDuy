@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/rel_gameWin"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/fr_youlose"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:id="@+id/img_youlose"
+                android:src="@drawable/youwinbanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:layout_gravity="bottom"
+                android:weightSum="4"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <TextView
+                    android:textColor="#ff373e"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:text="Your Score: "
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:weightSum="11"
+                    android:orientation="horizontal"
+                    android:id="@+id/ln_diaScore"
+                    android:gravity="start"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_below="@id/fr_youlose"
+            android:id="@+id/ln_tiendoManhGhep"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_anhsuutam"
+                    android:src="@drawable/anhsuutam"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ProgressBar
+                    android:id="@+id/prg_unlockImg"
+                    android:max="700"
+                    android:progress="200"
+                    android:secondaryProgress="700"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/hide_gradient"
+                    android:indeterminate="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/tv_prgUnLock"
+                    android:padding="2dp"
+                    android:background="#fff"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:text="100/1000"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_below="@id/ln_tiendoManhGhep"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:id="@+id/ln_nextRound"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp">
+                <TextView
+                    android:textColor="#26b19c"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Next Round"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:src="@drawable/nextround"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ln_homebackw"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp">
+                <TextView
+                    android:textColor="#26b19c"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Home"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:src="@drawable/homeicon"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.github.shchurov.particleview.ParticleView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/particleViewBurst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/img_cancelYouWin"
+        android:src="@drawable/cancelicon"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+</FrameLayout>
